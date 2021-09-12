@@ -2,8 +2,9 @@
 
 # Count the number of anime from the id (cat) and class (postform) name
 count=$(curl -s https://hi10anime.com | pup 'select#cat.postform text{}' | awk 'NF' | sed '1,2d' | wc -l)
+
 # Fetch the title
-curl -s https://hi10anime.com | pup 'h1.widget-title text{}' | awk 'NR==3{ print; }'
+curl -s https://hi10anime.com | pup 'h1.widget-title text{}' | awk 'NR==2{ print; }'
 
 printf "\n"
 # Fetch the ranking of most popular this week with the site view count
