@@ -22,3 +22,5 @@ To print current PATH environment variable.
 Don't forget to make the script executable.
 - `sudo chmod +x /usr/local/bin/anlist`
 
+## Screenshot
+![ani-list-demo](https://raw.githubusercontent.com/luqmannn/ani-list/main/screenshot.png)
