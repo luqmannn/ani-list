@@ -1,4 +1,6 @@
 # ani-list
+> Thank you to [ShaqeelAhmad](https://github.com/ShaqeelAhmad) for patch to fix slow:turtle: speed by caching it instead of using curl everytime.
+
 A simple shell script (bash) to check weekly most popular anime sorted by views.
 
 The script scrape from [hi10anime](https://hi10anime.com/)
