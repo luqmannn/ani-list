@@ -1,14 +1,16 @@
 #! /usr/bin/bash
 
+site=$(curl -s https://hi10anime.com)
+
 # Count the number of anime from the id (cat) and class (postform) name
-count=$(curl -s https://hi10anime.com | pup 'select#cat.postform text{}' | awk 'NF' | sed '1,2d' | wc -l)
+count=$(pup 'select#cat.postform text{}' <<<"$site" | awk 'NF' | sed '1,2d' | wc -l)
 
 # Fetch the title
-curl -s https://hi10anime.com | pup 'h1.widget-title text{}' | awk 'NR==2{ print; }'
+pup 'h1.widget-title text{}' <<<"$site" | awk 'NR==2{ print; }'
 
 printf "\n"
 # Fetch the ranking of most popular this week with the site view count
-paste <(curl -s https://hi10anime.com/ | pup 'a.wpp-post-title text{}' | sed -e 's/\[[^][]*\]//g') <(curl -s https://hi10anime.com/ | pup 'span.wpp-views text{}') | column -s $'\t' -t
+paste <(pup 'a.wpp-post-title text{}' <<<"$site" | sed -e 's/\[[^][]*\]//g') <(pup 'span.wpp-views text{}' <<<"$site") | column -s $'\t' -t
 
 printf "\n"
 printf "There are $count anime from the list.\n"
