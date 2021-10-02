@@ -26,3 +26,5 @@ Don't forget to make the script executable.
 
 ## Screenshot
 ![ani-list-demo](https://raw.githubusercontent.com/luqmannn/ani-list/main/screenshot.png)
+
+> I might as well provide the python version as well or any other language in the near future.
