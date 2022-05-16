@@ -29,7 +29,7 @@ echo $PATH | tr : \\n
 
 Don't forget to make the script executable.
 ```{sh}
-sudo chmod +x /usr/local/bin/anlist
+sudo chmod +x /usr/local/bin/ani-list
 ```
 
 ## Screenshot
