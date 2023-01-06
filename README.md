@@ -3,13 +3,15 @@
 
 A simple shell script (bash) to check weekly most popular anime sorted by views.
 
+> Python version for the script is now available.
+
 The script scrape from [hi10anime](https://hi10anime.com/)
 
-## Dependencies
-- awk
+## Dependencies (Bash)
+- [awk](https://www.gnu.org/software/gawk/manual/gawk.html)
 - [pup](https://github.com/ericchiang/pup)
-- sed
-- curl
+- [sed](https://www.gnu.org/software/sed/manual/sed.html)
+- [curl](https://curl.se/docs/)
 
 ## Usage
 Clone the repo 
@@ -32,7 +34,11 @@ Don't forget to make the script executable.
 sudo chmod +x /usr/local/bin/ani-list
 ```
 
+## Dependencies (Python)
+- [re](https://docs.python.org/3/library/re.html?highlight=re#module-re)
+- [requests](https://requests.readthedocs.io/en/latest/)
+- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+- [tabulate](https://pypi.org/project/tabulate/)
+
 ## Screenshot
 ![ani-list-demo](https://raw.githubusercontent.com/luqmannn/ani-list/main/screenshot.png)
-
-> I might as well provide the python version as well or any other language in the near future.
